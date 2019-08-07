@@ -1,0 +1,14 @@
+<h1>Bienvenue dans mon site BLALBLA BOOOM POTINS!!!!!  </h1>
+<p>Veuillez d'abord vous inscrie dans ce <%= link_to "lien", welcome_path%> </br>
+voici la liste des potins : </br>
+	<ul>
+		<% @potins.length.times do |i| %>
+		<li>
+		<%= @potins[i].user.first_name %> </br> 
+		<% params[:i] = @potins[i].user.first_name %></br>
+		Titre du potin: <%=link_to @potins[i].title, controller: "hello",
+		 action: "welcome", id: @potins[i].id %></br>
+		 </li>
+		<% end %>	
+	</ul>		
+</p>

@@ -1,0 +1,21 @@
+<h1>welcome</br>
+
+	<%= @first_name %></br>
+	Dans votre page de profil.</br>	
+</h1>
+
+<div>
+	<p>
+		<p>votre notre complet c'est : <%= link_to @last_name, controller: "author", action:"description", 
+		id:@user_id %> <%= @first_name %> </br>
+
+			Voici votre meilleurs ptotin : </br>
+				<p>
+				Titre: <%= @title %></br>
+				contenue: <%= @content %>
+
+				</p>
+		    </p>
+	</p>
+
+</div>
